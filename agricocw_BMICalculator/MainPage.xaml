@@ -17,8 +17,13 @@
             <Label Text="Select Gender:"
                    FontSize="18"
                    TextColor="Black" />
-            <Grid ColumnDefinitions="*,*" ColumnSpacing="20">
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="20"
+                  HorizontalOptions="Center">
+                <!-- Male Frame/Image -->
                 <Frame x:Name="MaleFrame"
+                       HeightRequest="120"
+                       WidthRequest="120"
                        BorderColor="Gray"
                        CornerRadius="10"
                        Padding="5"
@@ -31,7 +36,11 @@
                         </Image.GestureRecognizers>
                     </Image>
                 </Frame>
+
+                <!-- Female Frame/Image -->
                 <Frame x:Name="FemaleFrame"
+                       HeightRequest="120"
+                       WidthRequest="120"
                        BorderColor="Gray"
                        CornerRadius="10"
                        Padding="5"
@@ -49,12 +58,20 @@
 
             <!-- Height Slider -->
             <Label Text="Height (inches)" FontSize="18" />
-            <Slider x:Name="HeightSlider" Minimum="0" Maximum="100" Value="50" ValueChanged="HeightSlider_ValueChanged" />
+            <Slider x:Name="HeightSlider"
+                    Minimum="0"
+                    Maximum="100"
+                    Value="50"
+                    ValueChanged="HeightSlider_ValueChanged" />
             <Label x:Name="HeightLabel" Text="Height: 50 in" FontSize="16" />
 
             <!-- Weight Slider -->
             <Label Text="Weight (lbs)" FontSize="18" />
-            <Slider x:Name="WeightSlider" Minimum="0" Maximum="300" Value="90" ValueChanged="WeightSlider_ValueChanged" />
+            <Slider x:Name="WeightSlider"
+                    Minimum="0"
+                    Maximum="300"
+                    Value="90"
+                    ValueChanged="WeightSlider_ValueChanged" />
             <Label x:Name="WeightLabel" Text="Weight: 90 lbs" FontSize="16" />
 
             <!-- Button -->
